@@ -11,27 +11,30 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    max = int(input("Please enter the maximum number for FizzBuzz: "))
+    max = int(input("Enter the maximum number for FizzBuzz: "))
+    rule_nums = input("Enter the rules that you want to implement, each separated by a space: ")
+
+    rules = rule_nums.split()
 
     for x in range (1, max+1):
         out_string = ""
-        if x % 3 == 0:
+        if x % 3 == 0 and "3" in rules:
             out_string += "Fizz"
-        if x % 5 == 0:
+        if x % 5 == 0 and "5" in rules:
             out_string += "Buzz"
-        if x % 7 == 0:
+        if x % 7 == 0 and "7" in rules:
             out_string += "Bang"
-        if x % 11 == 0:
+        if x % 11 == 0 and "11" in rules:
             out_string = "Bong"
 
-        if x % 13 == 0:
+        if x % 13 == 0 and "13" in rules:
             index = out_string.find('B')
             if index == -1:
                 out_string += "Fezz"
             else:
                 out_string = out_string[:index] + "Fezz" + out_string[index:]
 
-        if x % 17 == 0:
+        if x % 17 == 0 and "17" in rules:
             names = []
             if len(out_string) > 4:
                 while len(out_string) != 0:
