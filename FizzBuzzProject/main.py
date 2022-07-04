@@ -11,7 +11,14 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    print_hi('How are you')
+    for x in range (1, 101):
+        if x % 3 == 0 and x % 5 == 0:
+            print("FizzBuzz")
+        elif x % 3 == 0:
+            print("Fizz")
+        elif x % 5 == 0:
+            print("Buzz")
+        else:
+            print(x)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
