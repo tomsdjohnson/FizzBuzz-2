@@ -11,7 +11,9 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    for x in range (200, 260):
+    max = int(input("Please enter the maximum number for FizzBuzz: "))
+
+    for x in range (1, max+1):
         out_string = ""
         if x % 3 == 0:
             out_string += "Fizz"
