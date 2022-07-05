@@ -3,7 +3,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
+### You can delete this un-needed function
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -16,6 +16,7 @@ if __name__ == '__main__':
 
     rules = rule_nums.split()
 
+    ### Could you seperate out the main FizzBuzz logic into a seperate function
     for x in range (1, max+1):
         out_string = ""
         if x % 3 == 0 and "3" in rules:
@@ -34,6 +35,10 @@ if __name__ == '__main__':
             else:
                 out_string = out_string[:index] + "Fezz" + out_string[index:]
 
+        ### In this bit of code you are converting a string into an array of strings and then turning that array back into a string
+        ### You also rely on the fact that the words that will be printed are 4 letters long what if that was no longer the case?
+        ### Could you instead see if you can use an array of strings right from the start and only convert it back to a string at the end when printing the result?
+        ### Please let me know if you have any questiosn about what I've said :)
         if x % 17 == 0 and "17" in rules:
             names = []
             if len(out_string) > 4:
